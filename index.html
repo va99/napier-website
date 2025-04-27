@@ -4,68 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Napier – Configure MCP from Prompts</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1 {
-      color: #2c3e50;
-      font-size: 2.5rem;
-    }
-    h2 {
-      color: #34495e;
-      margin-top: 2rem;
-    }
-    pre {
-      background: #ecf0f1;
-      padding: 1rem;
-      overflow-x: auto;
-    }
-    code {
-      font-family: monospace;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
+
+  <main>
     <h1>Napier</h1>
     <h2>Configure MCP directly from prompts</h2>
 
     <p>
-      This server is a server that installs other MCP servers for you.
-      Install it, and you can ask Claude to install MCP servers hosted in
-      <code>npm</code> or <code>PyPi</code> for you. Requires <code>npx</code> and <code>uv</code> to be installed for Node and Python servers respectively.
+      Napier is a special MCP server that installs other MCP servers for you.
+      Once it's set up, you can ask Claude to install MCP servers hosted on
+      <code>npm</code> or <code>PyPi</code> — no manual installs needed. It requires
+      <code>npx</code> for Node-based servers and <code>uv</code> for Python-based ones.
     </p>
 
-    <h2>🛠 How It Works</h2>
+    <h3>How to set it up</h3>
     <ol>
-      <li><strong>Install Node.js</strong> (if you haven’t already): <a href="https://nodejs.org" target="_blank">Download Node.js</a></li>
-      <li><strong>Edit your Claude config</strong> (<code>claude_desktop_config.json</code>):</li>
+      <li>Install <a href="https://nodejs.org" target="_blank">Node.js</a> if you don’t have it.</li>
+      <li>Edit your Claude config file and add the following:</li>
     </ol>
 
-    <pre><code>{
+<pre><code>{
   "mcpServers": {
     "napier-mcp": {
       "command": "npx",
@@ -77,25 +36,27 @@
 }
 </code></pre>
 
+    <p>File location:</p>
     <ul>
-      <li>📍 <strong>macOS</strong>: <code>~/Library/Application Support/Claude/claude_desktop_config.json</code></li>
-      <li>📍 <strong>Windows</strong>: <code>C:\Users\YOU\AppData\Roaming\Claude\claude_desktop_config.json</code></li>
+      <li><strong>macOS:</strong> ~/Library/Application Support/Claude/claude_desktop_config.json</li>
+      <li><strong>Windows:</strong> C:\Users\YOU\AppData\Roaming\Claude\claude_desktop_config.json</li>
     </ul>
 
-    <h2>💬 Example Prompts</h2>
+    <h3>What you can say to Claude</h3>
+    <ul>
+      <li><code>Hi Claude, please install the MCP server at /Users/bojack/code/whatsapp-mcp, I'm too lazy to do it myself.</code></li>
+      <li><code>Hey Claude, install the @notion-mcp package as an MCP server. Use ['/Users/bojack/Desktop'] for the arguments.</code></li>
+    </ul>
+
     <p>
-      Just say things like:
+      Want to see the code? It's open-source.<br/>
+      <a href="https://github.com/va99/napier" target="_blank">github.com/va99/napier</a>
     </p>
-    <ul>
-      <li><code>"Hi Claude, please install the MCP server at /Users/bojack/code/whatsapp-mcp, I'm too lazy to do it myself."</code></li>
-      <li><code>"Hey Claude, install the @notion-mcp package as an MCP server. Use ['/Users/bojack/Desktop'] for the arguments
 
-"</code></li>
-    </ul>
+    <footer>
+      <p>© 2025 Napier Project. Made for tasting.</p>
+    </footer>
+  </main>
 
-    <div class="footer">
-      &copy; 2025 Napier Project. Made for tasting.
-    </div>
-  </div>
 </body>
 </html>
