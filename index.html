@@ -13,14 +13,17 @@
     <h2>Configure MCP directly from prompts</h2>
 
     <p>
-      This server is a server that installs other MCP servers for you. 
-      Install it, and you can ask Claude to install MCP servers hosted on
-      <code>npm</code> or <code>PyPi</code> — no manual installs needed.
-    </p>
+  This server is a server that installs other MCP servers for you. 
+  Install it, and you can ask Claude to install MCP servers hosted on
+  <span style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 12px; color: #0366d6;">npm</span> or
+  <span style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 12px; color: #0366d6;">PyPi</span> — no manual installs needed.
+</p>
 
-    <p>
-      It requires <code>npx</code> for Node-based servers and <code>uv</code> for Python-based ones.
-    </p>
+<p>
+  It requires <span style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 12px; color: #c92c2c;">npx</span> for Node-based servers and
+  <span style="background-color: #f0f0f0; padding: 2px 6px; border-radius: 12px; color: #c92c2c;">uv</span> for Python-based ones.
+</p>
+
 
     <h3>🛠 How to set it up</h3>
     <ol>
@@ -28,20 +31,21 @@
       <li>Update your Claude config file to include this:</li>
     </ol>
 
-<pre style="font-family: Menlo, Monaco, monospace; font-size: 14px; line-height: 1.4; margin: 1.2em 0;">
+<pre style="font-family: Menlo, Monaco, monospace; font-size: 14px; line-height: 1.4; margin: 1.2em 0; background-color: #f9f9f9; padding: 8px; border-radius: 6px;">
 <code>
-<span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">{</span><br>
-  <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#6a737d;">"mcpServers"</span>: <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">{</span><br>
-    <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#6a737d;">"napier-mcp"</span>: <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">{</span><br>
-      <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#6a737d;">"command"</span>: <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#c92c2c;">"npx"</span>,<br>
-      <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#6a737d;">"args"</span>: <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">[</span><br>
-        <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#0366d6;">"napier-mcp"</span><br>
-      <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">]</span><br>
-    <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">}</span><br>
-  <span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">}</span><br>
-<span style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 4px; color:#555;">}</span>
+<span style="color:#6a737d;">{</span><br>
+  <span style="color:#6a737d;">"mcpServers"</span>: <span style="color:#6a737d;">{</span><br>
+    <span style="color:#6a737d;">"napier-mcp"</span>: <span style="color:#6a737d;">{</span><br>
+      <span style="color:#6a737d;">"command"</span>: <span style="color:#c92c2c;">"npx"</span>,<br>
+      <span style="color:#6a737d;">"args"</span>: <span style="color:#555;">[</span><br>
+        <span style="color:#0366d6;">"napier-mcp"</span><br>
+      <span style="color:#555;">]</span><br>
+    <span style="color:#6a737d;">}</span><br>
+  <span style="color:#6a737d;">}</span><br>
+<span style="color:#6a737d;">}</span>
 </code>
 </pre>
+
 
     
     <p>File location:</p>
