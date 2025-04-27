@@ -28,26 +28,21 @@
       <li>Update your Claude config file to include this:</li>
     </ol>
 
-<pre style="
-  background-color: #f6f6f6;
-  padding: 16px;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Menlo', 'Monaco', monospace;
-  color: #2f3337;">
-<code>{
-  "mcpServers": {
-    "napier-mcp": {
-      "command": "npx", 
-      "args": [
-        "napier-mcp"   
-      ]
-    }
-  }
-}
-</code></pre>
+<pre style="font-family: 'Menlo', 'Monaco', monospace; font-size: 15px; line-height: 1.6; margin: 1.5em 0;">
+<code>
+<span style="color:#555;">{</span><br>
+&nbsp;&nbsp;<span style="color:#6a737d;">"mcpServers"</span>: <span style="color:#555;">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a737d;">"napier-mcp"</span>: <span style="color:#555;">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a737d;">"command"</span>: <span style="color:#c92c2c;">"npx"</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6a737d;">"args"</span>: <span style="color:#555;">[</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0366d6;">"napier-mcp"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#555;">]</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#555;">}</span><br>
+&nbsp;&nbsp;<span style="color:#555;">}</span><br>
+<span style="color:#555;">}</span>
+</code>
+</pre>
+
     
     <p>File location:</p>
     <ul>
