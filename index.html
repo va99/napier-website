@@ -13,8 +13,8 @@
     <h2>Configure MCP directly from prompts</h2>
 
     <p>
-      Napier is a special MCP server that installs other MCP servers for you.
-      Once it's set up, you can ask Claude to install MCP servers hosted on
+      This server is a server that installs other MCP servers for you. 
+      Install it, and you can ask Claude to install MCP servers hosted on
       <code>npm</code> or <code>PyPi</code> — no manual installs needed.
     </p>
 
@@ -28,18 +28,28 @@
       <li>Update your Claude config file to include this:</li>
     </ol>
 
-<pre><code>{
+<pre style="
+  background-color: #f6f6f6;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Menlo', 'Monaco', monospace;
+  color: #2f3337;
+">
+<code>{
   "mcpServers": {
     "napier-mcp": {
-      "command": "npx",
+      "command": "npx", 
       "args": [
-        "napier-mcp"
+        "napier-mcp"   
       ]
     }
   }
 }
 </code></pre>
-
+    
     <p>File location:</p>
     <ul>
       <li><strong>macOS:</strong> ~/Library/Application Support/Claude/claude_desktop_config.json</li>
@@ -48,15 +58,10 @@
 
     <h3>💬 What you can say to Claude</h3>
     <ul>
-      <li><code>Hi Claude, please install the MCP server at /Users/bojack/code/whatsapp-mcp, I'm too lazy to do it myself.</code></li>
-      <li><code>Hey Claude, install the @notion-mcp package as an MCP server. Use ['/Users/bojack/Desktop'] for the arguments.</code></li>
+      <li>Hi Claude, please install the MCP server at /Users/bojack/code/whatsapp-mcp, I'm too lazy to do it myself.</li>
+      <li>Hey Claude, install the @notion-mcp package as an MCP server. Use ['/Users/bojack/Desktop'] for the arguments.</li>
+      <li>Install the server @modelcontextprotocol/server-github. Set the environment variable GITHUB_PERSONAL_ACCESS_TOKEN to '1234567890'</li>
     </ul>
-
-    <p>
-      Want to see the code? It’s open-source:<br/>
-      <a href="https://github.com/va99/napier" target="_blank">github</a>
-    </p>
-
     <hr />
 
     <p style="color: #666; font-size: 0.9em;">
