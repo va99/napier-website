@@ -28,28 +28,46 @@
     <h3>🛠 How to set it up</h3>
 <ol>
   <li>Install <a href="https://nodejs.org" target="_blank">Node.js</a> if you don’t have it.</li>
-  <li>Update your Claude config file to include this:</li>
+  <li>
+    Update your Claude config file.  
+    <br><br>
+    <span style="background-color: #f3f3f3; padding: 2px 6px; border-radius: 6px; font-family: monospace;">claude_desktop_config.json</span>  
+    <br>
+    Put this into your <span style="background-color: #f3f3f3; padding: 2px 6px; border-radius: 6px; font-family: monospace;">claude_desktop_config.json</span>  
+    (either at  
+    <span style="background-color: #f3f3f3; padding: 2px 6px; border-radius: 6px; font-family: monospace;">~/Library/Application Support/Claude</span> on macOS  
+    or  
+    <span style="background-color: #f3f3f3; padding: 2px 6px; border-radius: 6px; font-family: monospace;">C:\Users\NAME\AppData\Roaming\Claude</span> on Windows):
+  </li>
 </ol>
 
-<pre style="font-family: Menlo, Monaco, monospace; font-size: 13px; line-height: 1.4; margin: 1.5em 0; background-color: #f9f9f9; padding: 10px; border-radius: 6px; max-width: 600px; overflow-x: auto; margin-left: auto; margin-right: auto;">
+<blockquote style="position: relative; background-color: #fafafa; border-left: 4px solid #d0d0d0; padding: 1em 1.5em; font-family: Menlo, Monaco, monospace; font-size: 13px; line-height: 1.5; border-radius: 6px; margin-top: 1em; max-width: 100%; overflow-x: auto;">
+  <button onclick="navigator.clipboard.writeText(`{
+  \"mcpServers\": {
+    \"napier-mcp\": {
+      \"command\": \"npx\",
+      \"args\": [
+        \"napier-mcp\"
+      ]
+    }
+  }
+}`)" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer;" title="Copy to clipboard">
+    📎
+  </button>
 <code>
-<span style="color:#6a737d;">{</span><br>
-  <span style="color:#6a737d;">"mcpServers"</span>: <span style="color:#6a737d;">{</span><br>
-    <span style="color:#6a737d;">"napier-mcp"</span>: <span style="color:#6a737d;">{</span><br>
-      <span style="color:#6a737d;">"command"</span>: <span style="color:#c92c2c;">"npx"</span>,<br>
-      <span style="color:#6a737d;">"args"</span>: <span style="color:#555;">[</span><br>
-        <span style="color:#0366d6;">"napier-mcp"</span><br>
-      <span style="color:#555;">]</span><br>
-    <span style="color:#6a737d;">}</span><br>
-  <span style="color:#6a737d;">}</span><br>
-<span style="color:#6a737d;">}</span>
+{
+  "mcpServers": {
+    "napier-mcp": {
+      "command": "npx",
+      "args": [
+        "napier-mcp"
+      ]
+    }
+  }
+}
 </code>
-</pre>
+</blockquote>
 
-
-
-
-    
     <p>File location:</p>
     <ul>
       <li><strong>macOS:</strong> ~/Library/Application Support/Claude/claude_desktop_config.json</li>
